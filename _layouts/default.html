@@ -9,19 +9,27 @@
 			<ul class="w3-navbar w3-light-grey">
 				<li><a href="/">Home</a></li>
 				<li><a href="/about">About</a></li>
-				<li><a href="/cv">CV</a></li>
-				<li><a href="/blog">Blog</a></li>
 			</ul>
 			<div class="container">
+			
+			<ul>
+				{% for post in site.posts %}
+					<li>
+						<a href="{{ post.url }}">{{ post.title }}</a>
+					</li>
+				{% endfor %}
+			</ul>
 			
 			{{ content }}
 			
 			</div><!-- /.container -->
+			<!-- 
 			<footer>
 	    		<ul>
 	        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
 	        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
 				</ul>
 			</footer>
+			 -->
 		</body>
 	</html>
