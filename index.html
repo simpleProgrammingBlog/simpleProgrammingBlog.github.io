@@ -17,8 +17,9 @@ div.project img {
 }
 
 h4.project_title {
-	margin-top: 5px;
-	margin-bottom: 5px;
+	line-height: 0;
+	margin-top: 0px;
+	margin-bottom: 0px;
     text-align: center;
 }
 
@@ -46,7 +47,7 @@ div.desc {
 			{% for post in site.posts %}
 				<!-- if the post matches the title then add it -->
 				{% if post.title == title %}
-					<div class="title">
+					<div class="desc">
 						<a href="{{ post.url }}">{{ post.language }}</a>
 						<br>
 					</div>
