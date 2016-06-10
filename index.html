@@ -2,7 +2,78 @@
 layout: default
 title: Joshua Allen
 ---
+
+<style>
+div.project {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+div.project:hover {
+    border: 1px solid #777;
+}
+
+div.project img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+</style>
+
 <div class="blurb">
-	<h1>Hi there, I'm Hank Quinlan!</h1>
-	<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-</div><!-- /.blurb -->
+	<!-- fill title_array with all the titles for each post -->
+	{% assign title_array = "" | split:"" %}
+	{% for post in site.posts %}
+		{% unless title_array contains post.title %}
+			{% assign title_array = title_array | push: post.title %}
+		{% endunless %}
+	{% endfor %}
+	
+	<!--  -->
+	{% for title in title_array %}
+		<div class="project">
+			{{title}}
+				<a target="_blank" href="img_fjords.jpg">
+					<img src="{{ site.url }}/assets/project images/{{title}}.gif"  alt="{{ title }}" width="300" height="200"/>
+				</a>
+			{% for post in site.posts %}
+				<ul>
+					{% if post.title == title %}
+					<li>
+						<a href="{{ post.url }}">{{ post.language }}</a>
+					</li>
+					{% endif %}
+				</ul>
+			{% endfor %}
+		</div>
+	{% endfor %}
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
