@@ -41,6 +41,7 @@ div.desc {
 				<!-- if the post matches the title then add it -->
 				{% if post.title == title %}
 					<a href="{{ post.url }}">{{ post.language }}</a>
+					<br>
 				{% endif %}
 			{% endfor %}
 		</div>
