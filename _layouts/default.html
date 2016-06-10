@@ -23,7 +23,7 @@
 			<!--  -->
 			{% for title in title_array %}
 				<h1>{{title}}</h1>
-				<img src="{{ site.url }}/assets/project images/{{title}}"  alt="{{ title }}"/>
+				<img src="{{ site.url }}/assets/project images/{{title}}.png"  alt="{{ title }}"/>
 				{% for post in site.posts %}
 					<ul>
 						{% if post.title == title %}
