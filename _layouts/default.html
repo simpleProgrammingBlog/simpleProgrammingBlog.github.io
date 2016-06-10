@@ -13,19 +13,20 @@
 			<div class="container">
 			
 			<ul>
-				<!--<li>{{ site.posts.files | array_to_sentence_string}}</li> -->
 				{% for post in site.posts %}
 					{% if post.language == "Java" %}
 						<li>
 							<a href="{{ post.url }}">{{ post.title }}</a>
 						</li>
-						<!--
 						<li>
-							{{ post.relative_path | split:"/"}}
-						</li> -->
+							{{ site.relative_path }}
+						</li>
+						<li>
+							{{ post.relative_path }}
+						</li>
 					{% endif %}
+						<li>sep</li>
 				{% endfor %}
-				<li>sep</li>
 			</ul>
 			
 			{{ content }}
