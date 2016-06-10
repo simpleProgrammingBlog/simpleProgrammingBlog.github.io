@@ -12,14 +12,14 @@
 			</ul>
 			<div class="container">
 			
+			<!-- fill title_array with all the titles for each post -->
 			{% assign title_array = "" | split:"" %}
-			<!-- first get all the titles for each post -->
 			{% for post in site.posts %}
 				{% unless title_array contains post.title %}
 					{% assign title_array = title_array | push: post.title %}
 				{% endunless %}
 			{% endfor %}
-			
+			{{  assign title_array = title_array | sort }}
 			<ul>
 				<li>{{ title_array | array_to_sentence_string }}</li>
 			</ul>
