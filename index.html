@@ -16,7 +16,9 @@ div.project img {
     height: auto;
 }
 
-div.title {
+h4.title {
+	margin-top: 5px
+	margin-bottom: 5px;
     text-align: center;
 }
 
@@ -38,9 +40,7 @@ div.desc {
 	<!-- loop through each title in the array -->
 	{% for title in title_array %}
 		<div class="project">
-			<div class="title">
-				<h4>{{title}}</h4>
-			</div>
+			<h4 class="title">{{title}}</h4>
 			<img src="{{ site.url }}/assets/project images/{{title}}.gif"  alt="{{ title }}" width="180" height="180"/>
 			<!-- loop through each post that is in the site -->
 			{% for post in site.posts %}
