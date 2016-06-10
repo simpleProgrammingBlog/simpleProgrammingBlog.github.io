@@ -13,6 +13,10 @@
 			<div class="container">
 			
 			<ul>
+				<li>{{site.posts}}</li>
+			</ul>
+			<!-- 
+			<ul>
 				{% for post in site.posts %}
 					{% assign file_array = post.relative_path | split:"/" %}
 					
@@ -27,7 +31,7 @@
 						<li>sep</li>
 				{% endfor %}
 			</ul>
-			
+			 -->
 			{{ content }}
 			
 			</div><!-- /.container -->
