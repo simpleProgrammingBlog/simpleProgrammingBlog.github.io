@@ -13,7 +13,7 @@
 			<div class="container">
 			
 			<ul>
-				<li>{{ site.files | array_to_sentence_string}}</li>
+				<li>{{ site.posts.files | array_to_sentence_string}}</li>
 				{% for post in site.posts %}
 					{% if post.language == "Java" %}
 						<li>
