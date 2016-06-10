@@ -11,10 +11,6 @@ div.project {
     width: 180px;
 }
 
-div.project:hover {
-    border: 1px solid #777;
-}
-
 div.project img {
     width: 100%;
     height: auto;
@@ -35,21 +31,17 @@ div.desc {
 		{% endunless %}
 	{% endfor %}
 	
-	<!--  -->
+	<!-- loop through each title in the array -->
 	{% for title in title_array %}
 		<div class="project">
 			{{title}}
-				<a target="_blank" href="img_fjords.jpg">
-					<img src="{{ site.url }}/assets/project images/{{title}}.gif"  alt="{{ title }}" width="200" height="200"/>
-				</a>
+			<img src="{{ site.url }}/assets/project images/{{title}}.gif"  alt="{{ title }}" width="200" height="200"/>
+			<!-- loop through each post that is in the site -->
 			{% for post in site.posts %}
-				<ul>
-					{% if post.title == title %}
-					<li>
-						<a href="{{ post.url }}">{{ post.language }}</a>
-					</li>
-					{% endif %}
-				</ul>
+				<!-- if the post matches the title then add it -->
+				{% if post.title == title %}
+					<a href="{{ post.url }}">{{ post.language }}</a>
+				{% endif %}
 			{% endfor %}
 		</div>
 	{% endfor %}
