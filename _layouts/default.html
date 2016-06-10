@@ -19,7 +19,7 @@
 					{% assign title_array = title_array | push: post.title %}
 				{% endunless %}
 			{% endfor %}
-			{{  assign title_array = title_array | sort }}
+			{%  assign title_array = title_array | sort %}
 			<ul>
 				<li>{{ title_array | array_to_sentence_string }}</li>
 			</ul>
