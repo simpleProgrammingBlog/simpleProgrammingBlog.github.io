@@ -3,6 +3,22 @@ layout: home
 title: Joshua Allen
 ---
 
+<style>
+#card {
+    width: 180px; 
+	float: left; 
+	margin: 10px 10px 5px 5px;
+}
+#card.header {
+    padding: 5px 0px 0px 0px; 
+	text-align: center;
+}
+#title {
+	margin: 0px 0px 0px 0px;
+}
+
+</style>
+
 <div class="blurb">
 	<!-- fill title_array with all the titles for each post -->
 	{% assign title_array = "" | split:"" %}
@@ -14,9 +30,9 @@ title: Joshua Allen
 	
 	<!-- loop through each title in the array -->
 	{% for title in title_array %}
-		<div class="w3-card-4" style="width: 180px; float: left; margin: 10px 10px 5px 5px;">
-			<header class="w3-container w3-blue" style="padding: 5px 0px 0px 0px; text-align: center;">
-				<h4 class="project_title" style="margin: 0px 0px 0px 0px;">{{ title | truncate: 18 }}</h4>
+		<div class="w3-card-4" id="card">
+			<header class="w3-container w3-blue">
+				<h4 class="project_title" id="title">{{ title | truncate: 18 }}</h4>
 			</header>
 			<div class="w3-container" style="padding-left: 0px; padding-right: 0px;">
 			<img src="{{ site.url }}/assets/project images/{{title}}.gif"  alt="{{ title }}" onerror="this.src='{{ site.url }}/assets/project images/temp.gif'" width="180" height="180"/>
