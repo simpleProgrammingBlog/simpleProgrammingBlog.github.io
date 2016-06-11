@@ -26,7 +26,7 @@ title: Joshua Allen
 			{% for post in site.posts %}
 				<!-- if the post matches the title then add it -->
 				{% if post.title == title %}
-					<button class="w3-btn w3-dark-grey">{{ post.language }}</button>
+					<button class="w3-btn w3-dark-grey" style="text-transform: capitalize;">{{ post.language }}</button>
 				{% endif %}
 			{% endfor %}
 			</footer>
