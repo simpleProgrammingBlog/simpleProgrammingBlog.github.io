@@ -40,7 +40,9 @@ title: Joshua Allen
 	{% assign title_array = "" | split:"" %}
 	{% for post in site.posts %}
 		{% unless title_array contains post.title %}
+			
 			{% assign title_array = title_array | push: post.title %}
+			
 		{% endunless %}
 	{% endfor %}
 	
@@ -62,7 +64,7 @@ title: Joshua Allen
 				{% for post in site.posts %}
 					{% if post.title == title %}
 						<button class="w3-btn-block w3-dark-grey w3-hover-orange" id="button">
-							<a href="{{ post.url }}">{{ post.language }}</a>
+							<a href="{{ post.url }}" style="text-decoration: none;">{{ post.language }}</a>
 						</button>
 					{% endif %}
 				{% endfor %}
