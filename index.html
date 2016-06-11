@@ -23,10 +23,10 @@ title: Joshua Allen
 			</div>
 			<footer class="w3-container w3-blue ">
 			<!-- loop through each post that is in the site -->
+			<!-- if the post matches the title then add it -->
 			{% for post in site.posts %}
-				<!-- if the post matches the title then add it -->
 				{% if post.title == title %}
-					<button class="w3-btn w3-dark-grey w3-round-large" style="text-transform: capitalize; padding: 5px 10px 5px 10px; margin: 5px;">{{ post.language }}</button>
+					<button class="w3-btn w3-dark-grey w3-hover-orange w3-round-large" style="text-transform: capitalize; padding: 5px; margin: 5px;">{{ post.language }}</button>
 				{% endif %}
 			{% endfor %}
 			</footer>
