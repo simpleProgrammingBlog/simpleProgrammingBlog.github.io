@@ -41,7 +41,7 @@ div.desc {
 	{% for title in title_array %}
 		<div class="project">
 			<h4 class="project_title">{{title}}</h4>
-			<img src="{{ site.url }}/assets/project images/{{title}}.gif"  alt="{{ title }}" width="180" height="180"/>
+			<img src="{{ site.url }}/assets/project images/{{title}}.gif"  alt="{{ title }}" onerror="this.src='{{ site.url }}/assets/project images/temp.gif'" width="180" height="180"/>
 			<!-- loop through each post that is in the site -->
 			{% for post in site.posts %}
 				<!-- if the post matches the title then add it -->
