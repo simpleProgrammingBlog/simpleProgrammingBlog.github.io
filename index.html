@@ -30,8 +30,8 @@ title: Joshua Allen
 }
 #button {
 	text-transform: capitalize; 
-	padding: 5px; 
-	margin: 5px;
+	padding: 1px; 
+	margin: 1px;
 }
 </style>
 
@@ -61,8 +61,7 @@ title: Joshua Allen
 			<div class="w3-container w3-white" id="buttonHolder">
 				{% for post in site.posts %}
 					{% if post.title == title %}
-						<!-- <button class="w3-btn w3-dark-grey w3-hover-orange w3-round-large" id="button">{{ post.language }}</button> -->
-						<a href="#">{{ post.language }}</a> 
+						<button class="w3-btn w3-dark-grey w3-hover-orange w3-round-large" id="button">{{ post.language }}</button>
 					{% endif %}
 				{% endfor %}
 			</div>
