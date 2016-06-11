@@ -30,7 +30,7 @@ title: Joshua Allen
 	width: 100px;
 }
 #button {
-	float: right;
+	width: 90px;
 	text-transform: capitalize; 
 	padding: 5px; 
 	margin: 5px 5px 0px 0px;
@@ -63,7 +63,7 @@ title: Joshua Allen
 			<div class="w3-container w3-white" id="buttonHolder">
 				{% for post in site.posts %}
 					{% if post.title == title %}
-						<button class="w3-btn-block w3-dark-grey w3-hover-orange w3-round-large" id="button">{{ post.language }}</button>
+						<button class="w3-btn-block w3-dark-grey w3-hover-orange" id="button">{{ post.language }}</button>
 
 					{% endif %}
 				{% endfor %}
