@@ -13,8 +13,7 @@
 					
 					{% if page.type == 'post' %}
 						<li style="padding:8px 16px 8px 16px;">{{ page.title }}:</li>
-						
-						
+						<li style="padding:8px 16px 8px 16px;">test1:</li>
 						{% for post in site.posts %}
 
 								<li><a class="{% if post.language == page.language %}w3-green{% endfor %} w3-hover-green" href="{{ post.url }}">{{ post.language }}</a></li>
