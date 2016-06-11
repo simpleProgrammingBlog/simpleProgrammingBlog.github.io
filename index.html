@@ -61,7 +61,9 @@ title: Joshua Allen
 			<div class="w3-container w3-dark-grey" id="buttonHolder">
 				{% for post in site.posts %}
 					{% if post.title == title %}
-						<button class="w3-btn-block w3-dark-grey w3-hover-orange" id="button">{{ post.language }}</button>
+						<button class="w3-btn-block w3-dark-grey w3-hover-orange" id="button">
+							<a href="{{ post.url }}">{{ post.language }}</a>
+						</button>
 					{% endif %}
 				{% endfor %}
 			</div>
