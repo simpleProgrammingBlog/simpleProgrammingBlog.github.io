@@ -55,10 +55,11 @@ title: Joshua Allen
 					 width="180" 
 					 height="180"/>
 			</div>
-			<div class="w3-container" id="buttonHolder">
+			<div class="w3-container w3-green" id="buttonHolder">
 				{% for post in site.posts %}
 					{% if post.title == title %}
 						<button class="w3-btn w3-dark-grey w3-hover-orange w3-round-large" id="button">{{ post.language }}</button>
+						<br>
 					{% endif %}
 				{% endfor %}
 			</div>
