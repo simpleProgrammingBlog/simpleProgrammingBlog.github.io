@@ -16,9 +16,9 @@
 						
 						
 						{% for post in site.posts %}
-							{% if post.title == page.title %}
+
 								<li><a class="{% if post.language == page.language %}w3-green{% endfor %} w3-hover-green" href="{{ post.url }}">{{ post.language }}</a></li>
-							{% endif %}
+
 						{% endfor %}
 						
 						
