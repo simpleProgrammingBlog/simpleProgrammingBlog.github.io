@@ -39,11 +39,11 @@ div.desc {
 	
 	<!-- loop through each title in the array -->
 	{% for title in title_array %}
-		<div class="w3-card-4" style="width: 180px;">
+		<div class="w3-card-4" style="width: 180px; float: left;">
 			<header class="w3-container w3-blue">
 				<h4 class="project_title">{{title}}</h4>
 			</header>
-			<div class="w3-container">
+			<div class="w3-container" style="padding-left: 0px; padding-right: 0px;">
 			<img src="{{ site.url }}/assets/project images/{{title}}.gif"  alt="{{ title }}" onerror="this.src='{{ site.url }}/assets/project images/temp.gif'" width="180" height="180"/>
 			</div>
 			<footer class="w3-container w3-blue">
