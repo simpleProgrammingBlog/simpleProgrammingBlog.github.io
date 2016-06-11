@@ -21,12 +21,12 @@ title: Joshua Allen
 			<div class="w3-container" style="padding-left: 0px; padding-right: 0px;">
 			<img src="{{ site.url }}/assets/project images/{{title}}.gif"  alt="{{ title }}" onerror="this.src='{{ site.url }}/assets/project images/temp.gif'" width="180" height="180"/>
 			</div>
-			<footer class="w3-container w3-blue " style="padding: 5px;">
+			<footer class="w3-container w3-blue ">
 			<!-- loop through each post that is in the site -->
 			{% for post in site.posts %}
 				<!-- if the post matches the title then add it -->
 				{% if post.title == title %}
-					<button class="w3-btn w3-dark-grey" style="text-transform: capitalize;">{{ post.language }}</button>
+					<button class="w3-btn w3-dark-grey w3-round-large" style="text-transform: capitalize; padding: 5px 10px 5px 10px; margin: 5px;">{{ post.language }}</button>
 				{% endif %}
 			{% endfor %}
 			</footer>
