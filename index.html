@@ -49,7 +49,7 @@ title: Joshua Allen
 	<!-- loop through each title in the array -->
 	{% for title in title_array %}
 		<div class="w3-card-4" id="card">
-			<header class="w3-container w3-blue" id="header">
+			<header class="w3-container w3-theme" id="header">
 				<h4 class="project_title" id="title">{{ title | truncate: 25 }}</h4>
 			</header>
 			<div class="w3-container" id="imageHolder">
@@ -60,11 +60,11 @@ title: Joshua Allen
 					 height="180"/>
 			 
 			</div>
-			<div class="w3-container w3-grey" id="buttonHolder">
+			<div class="w3-container w3-theme-l2" id="buttonHolder">
 				{% for post in site.posts %}
 					{% if post.title == title %}
 						<a href="{{ post.url }}" style="text-decoration: none;">
-							<button class="w3-btn-block w3-grey w3-hover-green" id="button">
+							<button class="w3-btn-block w3-theme-l2 w3-hover-green" id="button">
 								{{ post.language }}
 							</button>
 						</a>
