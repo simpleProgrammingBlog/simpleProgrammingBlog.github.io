@@ -19,6 +19,12 @@ title: Joshua Allen
 #imageHolder {
 	padding-left: 0px; 
 	padding-right: 0px;
+	float: left; 
+}
+#buttonHolder {
+	padding-left: 0px; 
+	padding-right: 0px;
+	float: right; 
 }
 #button {
 	text-transform: capitalize; 
@@ -49,15 +55,15 @@ title: Joshua Allen
 					 width="180" 
 					 height="180"/>
 			</div>
-			<footer class="w3-container w3-blue" style="padding: 0px;">
-			<!-- loop through each post that is in the site -->
-			<!-- if the post matches the title then add it -->
-			{% for post in site.posts %}
-				{% if post.title == title %}
-					<button class="w3-btn w3-dark-grey w3-hover-orange w3-round-large" id="button">{{ post.language }}</button>
-				{% endif %}
-			{% endfor %}
-			</footer>
+			<div class="w3-container" id="buttonHolder">
+				{% for post in site.posts %}
+					{% if post.title == title %}
+						<button class="w3-btn w3-dark-grey w3-hover-orange w3-round-large" id="button">{{ post.language }}</button>
+					{% endif %}
+				{% endfor %}
+			</div>
+			
+
 		</div>
 	{% endfor %}
 </div>
