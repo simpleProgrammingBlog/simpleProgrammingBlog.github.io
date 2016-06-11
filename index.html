@@ -9,14 +9,22 @@ title: Joshua Allen
 	float: left; 
 	margin: 10px 10px 5px 5px;
 }
-#card.header {
+#header {
     padding: 5px 0px 0px 0px; 
 	text-align: center;
 }
 #title {
 	margin: 0px 0px 0px 0px;
 }
-
+#imageHolder {
+	padding-left: 0px; 
+	padding-right: 0px;
+}
+#button {
+	text-transform: capitalize; 
+	padding: 5px; 
+	margin: 5px;
+}
 </style>
 
 <div class="blurb">
@@ -31,18 +39,22 @@ title: Joshua Allen
 	<!-- loop through each title in the array -->
 	{% for title in title_array %}
 		<div class="w3-card-4" id="card">
-			<header class="w3-container w3-blue">
+			<header class="w3-container w3-blue" id="header">
 				<h4 class="project_title" id="title">{{ title | truncate: 18 }}</h4>
 			</header>
-			<div class="w3-container" style="padding-left: 0px; padding-right: 0px;">
-			<img src="{{ site.url }}/assets/project images/{{title}}.gif"  alt="{{ title }}" onerror="this.src='{{ site.url }}/assets/project images/temp.gif'" width="180" height="180"/>
+			<div class="w3-container" id="imageHolder">
+				<img src="{{ site.url }}/assets/project images/{{title}}.gif"  
+					 alt="{{ title }}" 
+					 onerror="this.src='{{ site.url }}/assets/project images/temp.gif'" 
+					 width="180" 
+					 height="180"/>
 			</div>
 			<footer class="w3-container w3-blue" style="padding: 0px;">
 			<!-- loop through each post that is in the site -->
 			<!-- if the post matches the title then add it -->
 			{% for post in site.posts %}
 				{% if post.title == title %}
-					<button class="w3-btn w3-dark-grey w3-hover-orange w3-round-large" style="text-transform: capitalize; padding: 5px; margin: 5px;">{{ post.language }}</button>
+					<button class="w3-btn w3-dark-grey w3-hover-orange w3-round-large" id="button">{{ post.language }}</button>
 				{% endif %}
 			{% endfor %}
 			</footer>
