@@ -9,11 +9,11 @@
 			<div class="w3-top">
 				<ul class="w3-navbar w3-card-2 w3-theme-l3" style="margin-right: 32px;">
 				
-					<li><a class="w3-hover-green" href="/">Projects</a></li>
+					<li><a class="{% if page.type == 'main' %}w3-green{% endif %} w3-hover-green" href="/">Projects</a></li>
 					
 					{% if page.type == 'post' %}
-						<li style="padding:8px 16px 8px 16px;">{{ page.title }}:</li>
-						<li style="padding:8px 16px 8px 16px;">test1:</li>
+					
+						<li class="w3-red" style="padding:8px 16px 8px 16px;">{{ page.title }}:</li>
 						{% for post in site.posts %}
 							{% if post.title == page.title %}
 								<li><a class="{% if post.language == page.language %}w3-green{% endif %} w3-hover-green" href="{{ post.url }}">{{ post.language }}</a></li>
@@ -23,7 +23,7 @@
 						
 					{% endif %}
 					
-					<li class="w3-right"><a class=" w3-hover-green" href="/about/">About</a></li>
+					<li class="w3-right"><a class="{% if page.type == 'about' %}w3-green{% endif %} w3-hover-green" href="/about/">About</a></li>
 					
 				</ul>
 			</div>
