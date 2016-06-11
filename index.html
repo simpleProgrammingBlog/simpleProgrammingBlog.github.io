@@ -16,7 +16,7 @@ title: Joshua Allen
 	{% for title in title_array %}
 		<div class="w3-card-4" style="width: 180px; float: left; margin: 10px 10px 5px 5px;">
 			<header class="w3-container w3-blue" style="padding: 5px 0px 0px 0px; text-align: center;">
-				<h4 class="project_title" style="margin: 0px 0px 0px 0px;">{{title}}</h4>
+				<h4 class="project_title" style="margin: 0px 0px 0px 0px;">{{ title | truncate: 18 }}</h4>
 			</header>
 			<div class="w3-container" style="padding-left: 0px; padding-right: 0px;">
 			<img src="{{ site.url }}/assets/project images/{{title}}.gif"  alt="{{ title }}" onerror="this.src='{{ site.url }}/assets/project images/temp.gif'" width="180" height="180"/>
