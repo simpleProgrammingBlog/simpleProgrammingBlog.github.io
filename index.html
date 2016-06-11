@@ -39,21 +39,22 @@ div.desc {
 	
 	<!-- loop through each title in the array -->
 	{% for title in title_array %}
-		<div class="project">
-			<h4 class="project_title">{{title}}</h4>
-			<hr style="margin-top: 5px; margin-bottom: 0px;">
+		<div class="w3-card-4" style="width:50%;">
+			<header class="w3-container w3-blue">
+				<h4 class="project_title">{{title}}</h4>
+			</header>
+			<div class="w3-container">
 			<img src="{{ site.url }}/assets/project images/{{title}}.gif"  alt="{{ title }}" onerror="this.src='{{ site.url }}/assets/project images/temp.gif'" width="180" height="180"/>
-			<hr style="margin-top: 0px; margin-bottom: 5px;">
+			</div>
+			<footer class="w3-container w3-blue">
 			<!-- loop through each post that is in the site -->
 			{% for post in site.posts %}
 				<!-- if the post matches the title then add it -->
 				{% if post.title == title %}
-					<div class="desc">
-						<a href="{{ post.url }}">{{ post.language }}</a>
-						<br>
-					</div>
+					<button class="w3-btn w3-dark-grey">{{ post.language }}</button>
 				{% endif %}
 			{% endfor %}
+			</footer>
 		</div>
 	{% endfor %}
 </div>
