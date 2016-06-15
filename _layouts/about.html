@@ -7,11 +7,19 @@ layout: default
 		<div class="w3-left"><h1>{{ page.title }}</h1></div>
 	</header>
 	<div class="w3-row">
-		<div class="w3-col s6 w3-center">
-			{{ site.posts }}
-		</div>
-		<div class="w3-col s6 w3-center">
-			{% include authors.html %}
-		</div>
+		{% for post in site.posts %}
+			{% if page.type == 'about' %}
+				{% if page.part == 'main' %}
+					<div class="w3-col s6 w3-center">
+						{{ post.content }}
+					</div>
+				{% endif %}
+				{% if page.part == 'author' %}
+					<div class="w3-col s6 w3-center">
+						{{ post.content }}
+					</div>
+				{% endif %}
+			{% endif %}
+		{% endfor %}
 	</div>
 </div>

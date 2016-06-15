@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "about"
-part: "main"
+part: main
 type: about
 ---
 
