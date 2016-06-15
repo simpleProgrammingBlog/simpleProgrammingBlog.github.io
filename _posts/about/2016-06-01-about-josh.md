@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "about"
+title: "Josh"
 part: author
 type: about
 ---
