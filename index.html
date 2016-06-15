@@ -41,9 +41,9 @@ type: main
 	{% assign title_array = "" | split:"" %}
 	{% for post in site.posts %}
 		{% unless title_array contains post.title %}
-			
-			{% assign title_array = title_array | push: post.title %}
-			
+			{% if post.type == post %}
+				{% assign title_array = title_array | push: post.title %}
+			{% endif %}
 		{% endunless %}
 	{% endfor %}
 	
