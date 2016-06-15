@@ -8,13 +8,13 @@ layout: default
 	</header>
 	<div class="w3-row">
 		{% for post in site.posts %}
-			{% if page.type == 'about' %}
-				{% if page.part == 'main' %}
+			{% if post.type == 'about' %}
+				{% if post.part == 'main' %}
 					<div class="w3-col s6 w3-center">
 						{{ post.content }}
 					</div>
 				{% endif %}
-				{% if page.part == 'author' %}
+				{% if post.part == 'author' %}
 					<div class="w3-col s6 w3-center">
 						{{ post.content }}
 					</div>
