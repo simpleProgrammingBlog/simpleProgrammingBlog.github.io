@@ -1,33 +1,39 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>Projects</title>
-			<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-			<link rel="stylesheet" href="/assets/css/style.css">
-		</head>
-		<body class="w3-container" style="background: linear-gradient(90deg ,#8EADA2 ,#88968A ,#8EADA2 );">
-			<div class="w3-top">
-				<ul class="w3-navbar w3-card-2 w3-theme-l3" style="margin-right: 32px;">
+<html>
+	<head>
+		<title>Projects</title>
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+		<link rel="stylesheet" href="/assets/css/style.css">
+	</head>
+	<body class="w3-container" style="background: linear-gradient(90deg ,#8EADA2 ,#88968A ,#8EADA2 );">
+		<div class="w3-top">
+			<ul class="w3-navbar w3-card-2 w3-theme-l3" style="margin-right: 32px;">
+			
+				<li><a class="{% if page.type == 'main' %}w3-green{% endif %} w3-hover-green" href="/">Projects</a></li>
 				
-					<li><a class="{% if page.type == 'main' %}w3-green{% endif %} w3-hover-green" href="/">Projects</a></li>
+				{% if page.type == 'post' %}
+				
+					<li class="w3-red" style="padding:8px 16px 8px 16px;">{{ page.title }}:</li>
+					{% for post in site.posts %}
+						{% if post.title == page.title %}
+							<li><a class="{% if post.language == page.language %}w3-green{% endif %} w3-hover-green" href="{{ post.url }}">{{ post.language }}</a></li>
+						{% endif %}
+					{% endfor %}
 					
-					{% if page.type == 'post' %}
 					
-						<li class="w3-red" style="padding:8px 16px 8px 16px;">{{ page.title }}:</li>
-						{% for post in site.posts %}
-							{% if post.title == page.title %}
-								<li><a class="{% if post.language == page.language %}w3-green{% endif %} w3-hover-green" href="{{ post.url }}">{{ post.language }}</a></li>
-							{% endif %}
-						{% endfor %}
-						
-						
-					{% endif %}
-					
-					<li class="w3-right"><a class="{% if page.type == 'about' %}w3-green{% endif %} w3-hover-green" href="/about/">About</a></li>
-					
-				</ul>
-			</div>
-			<br><br>
-			{{ content }}
-		</body>
-	</html>
+				{% endif %}
+				
+				<li class="w3-right"><a class="{% if page.type == 'about' %}w3-green{% endif %} w3-hover-green" href="/about/">About</a></li>
+				
+			</ul>
+		</div>
+		<br><br>
+		{{ content }}
+	</body>
+	
+	{% for author in site.data.authors %}
+		<p>
+			{{ author }}
+		</p>
+	{% endfor %}
+</html>
