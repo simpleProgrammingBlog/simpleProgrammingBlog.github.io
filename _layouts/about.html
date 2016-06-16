@@ -11,7 +11,7 @@ layout: default
 			{% for post in site.posts %}
 				{% if post.type == 'about' %}
 					{% if post.part == 'main' %}
-						<div class="w3-left">
+						<div class="w3-card">
 							{{ post.content }}
 						</div>
 					{% endif %}
@@ -23,7 +23,7 @@ layout: default
 			{% for post in site.posts %}
 				{% if post.type == 'about' %}
 					{% if post.part == 'author' %}
-						<div class="w3-right">
+						<div class="w3-card">
 							{{ post.content }}
 						</div>
 					{% endif %}
