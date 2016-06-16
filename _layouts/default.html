@@ -4,8 +4,9 @@
 		<title>Projects</title>
 		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 		<link rel="stylesheet" href="/assets/css/style.css">
+		<script src="/javascripts/main.js"></script>
 	</head>
-	<body class="w3-container" style="background: linear-gradient(90deg ,#8EADA2 ,#88968A ,#8EADA2 );">
+	<body class="w3-container" style="background: #8EADA2;">
 		<div class="w3-top">
 			<ul class="w3-navbar w3-card-2 w3-theme-l3" style="margin-right: 32px;">
 			
@@ -29,11 +30,11 @@
 		{{ content }}
 	</body>
 	
-	<button onclick="document.getElementById('joshua').style.display='block'" class="w3-btn">Open Animated Modal</button>
+	<button onclick="open_author('joshua')" class="w3-btn">Open Animated Modal</button>
 	{% for author in site.data.authors %}
 		<div id="{{ author.id }}" class="w3-modal">
-		  <div class="w3-modal-content w3-animate-top w3-card-8">
-			<header class="w3-container w3-teal">
+		  <div class="w3-modal-content w3-animate-right w3-card-8">
+			<header class="w3-container w3-theme-l3">
 			  <span onclick="document.getElementById('{{ author.id }}').style.display='none'"
 			  class="w3-closebtn">&times;</span>
 			  <h2>{{ author.name }}</h2>
