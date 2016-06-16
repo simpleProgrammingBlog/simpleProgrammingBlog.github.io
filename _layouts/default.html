@@ -19,8 +19,6 @@
 							<li><a class="{% if post.language == page.language %}w3-green{% endif %} w3-hover-green" href="{{ post.url }}">{{ post.language }}</a></li>
 						{% endif %}
 					{% endfor %}
-					
-					
 				{% endif %}
 				
 				<li class="w3-right"><a class="{% if page.type == 'about' %}w3-green{% endif %} w3-hover-green" href="/about/">About</a></li>
@@ -31,18 +29,19 @@
 		{{ content }}
 	</body>
 	
+	<button onclick="document.getElementById('joshua').style.display='block'" class="w3-btn">Open Animated Modal</button>
 	{% for author in site.data.authors %}
-		<p>
-			{{ author.id }}
-		</p>
-		<p>
-			{{ author.name }}
-		</p>
-		<p>
-			{{ author.email }}
-		</p>
-		<p>
-			{{ author.about }}
-		</p>
+		<div id="{{ author.id }}" class="w3-modal">
+		  <div class="w3-modal-content w3-animate-top w3-card-8">
+			<header class="w3-container w3-teal">
+			  <span onclick="document.getElementById('{{ author.id }}').style.display='none'"
+			  class="w3-closebtn">&times;</span>
+			  <h2>{{ author.name }}</h2>
+			</header>
+			<div class="w3-container">
+			  <p>{{ author.about }}</p>
+			</div>
+		  </div>
+		</div>
 	{% endfor %}
 </html>
