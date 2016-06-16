@@ -30,19 +30,24 @@
 		{{ content }}
 	</body>
 	
+	<!-- <button onclick="open_author('joshua')" class="w3-btn">Joshua</button> -->
 	<button onclick="open_author('joshua')" class="w3-btn">Joshua</button>
 	{% for author in site.data.authors %}
 		<div id="{{ author.id }}" class="w3-modal">
-		  <div class="w3-modal-content w3-animate-right w3-card-8">
-			<header class="w3-container w3-theme-l3">
-			  <span onclick="document.getElementById('{{ author.id }}').style.display='none'"
-			  class="w3-closebtn">&times;</span>
-			  <h2>{{ author.name }}</h2>
-			</header>
-			<div class="w3-container">
-			  <p>{{ author.about | markdownify}}</p>
+			<div class="w3-modal-content w3-animate-right w3-card-8">
+				<header class="w3-container w3-theme-l3">
+					<span onclick="document.getElementById('{{ author.id }}').style.display='none'" class="w3-closebtn">&times;</span>
+					<h2>{{ author.name }}</h2>
+				</header>
+				<div class="w3-container">
+					<img src="{{ site.url }}/assets/project images/author_{{author.id}}.jpg"  
+						 alt="{{ title }}" 
+						 onerror="this.src='{{ site.url }}/assets/project images/temp.jpg'"
+						 width="180" 
+						 height="180"/>
+					<p>{{ author.about | markdownify }}</p>
+				</div>
 			</div>
-		  </div>
 		</div>
 	{% endfor %}
 </html>
