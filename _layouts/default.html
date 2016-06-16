@@ -30,7 +30,7 @@
 		{{ content }}
 	</body>
 	
-	<button onclick="open_author('joshua')" class="w3-btn">Open Animated Modal</button>
+	<button onclick="open_author('joshua')" class="w3-btn">Joshua</button>
 	{% for author in site.data.authors %}
 		<div id="{{ author.id }}" class="w3-modal">
 		  <div class="w3-modal-content w3-animate-right w3-card-8">
@@ -40,7 +40,7 @@
 			  <h2>{{ author.name }}</h2>
 			</header>
 			<div class="w3-container">
-			  <p>{{ author.about }}</p>
+			  <p>{{ author.about | markdownify}}</p>
 			</div>
 		  </div>
 		</div>
