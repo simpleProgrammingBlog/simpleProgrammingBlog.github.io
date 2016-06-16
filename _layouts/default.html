@@ -31,7 +31,7 @@
 	</body>
 	
 	<!-- <button onclick="open_author('joshua')" class="w3-btn">Joshua</button> -->
-	<button onclick="open_author('joshua')" class="w3-btn">Joshua 4</button>
+	<button onclick="open_author('joshua')" class="w3-btn">Joshua 5</button>
 	
 	{% for author in site.data.authors %}
 		<div id="{{ author.id }}" class="w3-modal">
@@ -58,9 +58,9 @@
 						<form action="https://formspree.io/{{ author.email }}" method="post" enctype="text/plain">
 							<input type="hidden" name="_subject" value="Connect From Blog" />
 							<input type="hidden" name="_next" value="/" />
-							<input class="w3-input w3-border" type="text" name="name" placeholder="Name">
-							<input class="w3-input w3-border" type="text" name="_replyto" placeholder="E-mail">
-							<textarea name="message" name="Comment" rows="10" cols="30"></textarea>
+							<input type="text" name="name" required>
+							<input type="text" name="_replyto" required>
+							<textarea name="message" rows="10" cols="30"></textarea>
 							<input type="submit" value="Send">
 						</form>
 						
