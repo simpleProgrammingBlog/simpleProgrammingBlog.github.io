@@ -35,10 +35,12 @@
 	{% for author in site.data.authors %}
 		<div id="{{ author.id }}" class="w3-modal">
 			<div class="w3-modal-content w3-animate-right w3-card-8">
+			
 				<header class="w3-container w3-theme-l3">
 					<span onclick="document.getElementById('{{ author.id }}').style.display='none'" class="w3-closebtn">&times;</span>
 					<h2>{{ author.name }}</h2>
 				</header>
+				
 				<div class="w3-container" style="padding: 16px;">
 					<div class="w3-right w3-container" style="padding: 0px; margin: 0px 0px 0px 16px; width:180px;">
 						<img src="{{ site.url }}/assets/author photos/author_{{author.id}}.jpg"  
@@ -47,9 +49,26 @@
 					</div>
 					<p style="margin: 0px;">{{ author.about }}</p>
 				</div>
-				<button class="w3-btn-block w3-theme-l3">
-					<a href="mailto:{{ author.email }}?Subject=Connect" target="_top">Connect</a>
-				</button>
+				
+				<div class="w3-accordion">
+					<button onclick="email_show('email_{{ author.id }}')" class="w3-btn-block w3-theme-l3">Connect</button>
+					<div id="email_{{ author.id }}" class="w3-accordion-content w3-container">
+						<p>Some text..</p>
+					</div>
+				</div>
+				<script>
+					function email_show(id) {
+						var x = document.getElementById(id);
+						if (x.className.indexOf("w3-show") == -1) {
+							x.className += " w3-show";
+							x.previousElementSibling.className += " w3-green";
+						} else {
+							x.className = x.className.replace(" w3-show", "");
+							x.previousElementSibling.className.replace(" w3-green", "");
+						}
+					}
+				</script>
+				
 			</div>
 		</div>
 	{% endfor %}
