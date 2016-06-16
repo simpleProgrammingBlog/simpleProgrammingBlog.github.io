@@ -8,28 +8,7 @@ layout: default
 	</header>
 	<div class="w3-container">
 		<div class="w3-left">
-			{% for post in site.posts %}
-				{% if post.type == 'about' %}
-					{% if post.part == 'main' %}
-						<div class="w3-card">
-							{{ post.content }}
-						</div>
-					{% endif %}
-				{% endif %}
-			{% endfor %}
-		</div>
-		<!-- put a Modal in includes -->
-		<!-- I don't like doing two for loops but what ever -->
-		<div class="w3-right" style="width:350px;">
-			{% for post in site.posts %}
-				{% if post.type == 'about' %}
-					{% if post.part == 'author' %}
-						<div class="w3-card">
-							{{ post.content }}
-						</div>
-					{% endif %}
-				{% endif %}
-			{% endfor %}
+			{{ content }}
 		</div>
 	</div>
 </div>
