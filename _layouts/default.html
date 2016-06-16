@@ -31,7 +31,6 @@
 	</body>
 	
 	<!-- <button onclick="open_author('joshua')" class="w3-btn">Joshua</button> -->
-	<button onclick="open_author('joshua')" class="w3-btn">Joshua</button>
 	{% for author in site.data.authors %}
 		<div id="{{ author.id }}" class="w3-modal">
 			<div class="w3-modal-content w3-animate-right w3-card-8">
@@ -40,16 +39,16 @@
 					<h2>{{ author.name }}</h2>
 				</header>
 				<div class="w3-container" style="padding: 16px;">
-					<div class="w3-right w3-container" style="padding: 0px; margin: 0px 0px 0px 5px; width:180px;">
+					<div class="w3-right w3-container" style="padding: 0px; margin: 0px 0px 0px 16px; width:180px;">
 						<img src="{{ site.url }}/assets/author photos/author_{{author.id}}.jpg"  
 							 onerror="this.src='{{ site.url }}/assets/author photos/author_null.jpg'"
 							 alt="{{ title }}"/>
-						<button class="w3-btn-block w3-dark-grey">
-							<a href="mailto:{{ author.email }}?Subject=Connect" target="_top">Connect</a>
-						</button>
 					</div>
 					<p style="margin: 0px;">{{ author.about }}</p>
 				</div>
+				<button class="w3-btn-block w3-theme-l3">
+					<a href="mailto:{{ author.email }}?Subject=Connect" target="_top">Connect</a>
+				</button>
 			</div>
 		</div>
 	{% endfor %}
