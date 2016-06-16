@@ -44,6 +44,9 @@
 						<img src="{{ site.url }}/assets/author photos/author_{{author.id}}.jpg"  
 							 onerror="this.src='{{ site.url }}/assets/author photos/author_null.jpg'"
 							 alt="{{ title }}"/>
+						<button class="w3-btn-block w3-dark-grey">
+							<a href="mailto:{{ author.email }}?Subject=Connect" target="_top">Connect</a>
+						</button>
 					</div>
 					<p style="margin: 0px;">{{ author.about }}</p>
 				</div>
