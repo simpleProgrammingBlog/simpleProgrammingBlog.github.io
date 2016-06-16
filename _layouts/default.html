@@ -51,21 +51,36 @@
 				</div>
 				
 				<div class="w3-accordion">
-					<button id="button_{{ author.id }}" onclick="email_show('{{ author.id }}')" class="w3-btn-block w3-theme-l3">Connect</button>
+					<button onclick="email_show('{{ author.id }}')" class="w3-btn-block w3-theme-l3">Connect</button>
 					<div id="email_{{ author.id }}" class="w3-accordion-content w3-container">
-						<p>Some text..</p>
+					
+						<form action="MAILTO:{{ author.email }}" method="post" enctype="text/plain">
+							<div class="w3-half">
+								<label>Name:</label>
+								<input class="w3-input w3-border" type="text" placeholder="Name">
+							</div>
+							<div class="w3-half">
+								<label>E-mail:</label>
+								<input class="w3-input w3-border" type="text" placeholder="E-mail">
+							</div>
+							<div class="w3-container">
+								<label>Comment:</label>
+								<textarea name="message" rows="10" cols="30"></textarea>
+							</div>
+							<div class="w3-container">
+								<button class="w3-btn w3-brown">Send</button>
+							</div>
+						</form>
+						
 					</div>
 				</div>
 				<script>
 					function email_show(id) {
 						var x = document.getElementById('email_'+id);
-						var b = document.getElementById('button_'+id);
 						if (x.className.indexOf("w3-show") == -1) {
 							x.className += " w3-show";
-							b.className.replace(" w3-theme-l3", "w3-green");
 						} else {
 							x.className = x.className.replace(" w3-show", "");
-							b.className.replace(" w3-green", "w3-theme-l3");
 						}
 					}
 				</script>
