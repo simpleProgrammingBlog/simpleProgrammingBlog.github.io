@@ -40,11 +40,10 @@
 					<h2>{{ author.name }}</h2>
 				</header>
 				<div class="w3-container">
-					<img src="{{ site.url }}/assets/project images/author_{{author.id}}.jpg"  
-						 alt="{{ title }}" 
-						 onerror="this.src='{{ site.url }}/assets/project images/temp.jpg'"
-						 width="180" 
-						 height="180"/>
+					<img src="{{ site.url }}/assets/author photos/author_{{author.id}}.jpg"  
+						 onerror="this.src='{{ site.url }}/assets/author photos/author_null.jpg'"
+						 class="w3-right" alt="{{ title }}"/>
+						 
 					<p>{{ author.about | markdownify }}</p>
 				</div>
 			</div>
