@@ -75,6 +75,7 @@ headings
 
 --
 lists
+
 1. First item
 2. Second item
 3. Third item
@@ -85,6 +86,7 @@ lists
 
 --
 tables
+
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
 | col 3 is      | right-aligned | $1600 |
@@ -93,9 +95,14 @@ tables
 
 --
 text markup
+
 **strong** text
+
 _emphasis_ text
+
 `inline` code
+
 [link](http://jekyllrb.com) text
+
 ![Alt tag](/path/to/image.jpg)
 
