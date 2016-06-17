@@ -10,7 +10,7 @@ permalink: /GameOfLife-java
 Blockquote
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras volutpat odio nec libero cursus, commodo feugiat magna condimentum. Cras fermentum quam et nibh vehicula, ac imperdiet velit sollicitudin. Fusce quis arcu lacus. Mauris placerat lorem eu aliquam volutpat. Vivamus eu nisi non nulla tempor semper. Praesent nisl eros, blandit varius justo pulvinar, volutpat suscipit leo. Aliquam lacinia aliquam ex a aliquet.
 
----
+--
 code blocks
 ```Java
 public class HelloWorld {
@@ -57,14 +57,14 @@ No language indicated, so no syntax highlighting.
 But let's throw in a <b>tag</b>.
 ```
 
----
+--
 definition list
 HTML
 : Hypertext Markup Language, a standardized system for tagging text files.
 CSS
 : Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language
 
----
+--
 headings
 # H1
 ## H2
@@ -73,7 +73,7 @@ headings
 ##### H5
 ###### H6
 
----
+--
 lists
 1. First item
 2. Second item
@@ -83,7 +83,7 @@ lists
 * Second item
 * Third item
 
----
+--
 tables
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
@@ -91,7 +91,7 @@ tables
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
 
----
+--
 text markup
 **strong** text
 _emphasis_ text
