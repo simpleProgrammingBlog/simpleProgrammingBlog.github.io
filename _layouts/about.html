@@ -7,12 +7,12 @@ layout: default
 		<div class="w3-left"><h1>{{ page.title }}</h1></div>
 	</header>
 	<div class="w3-container">
-		<div class="w3-container" style="padding: 16px;">
+		<div class="w3-container" style="padding: 16px 0px 0px 16px;">
 			<div class="w3-right w3-container" style="padding: 0px; margin: 0px 0px 0px 16px; width:180px;">
 				<header class="w3-container w3-theme">
 					<h3>Authors</h3>
 				</header>
-				<div class="w3-container">
+				<div class="w3-container" style="padding: 0px;">
 					{% for author in site.data.authors %}
 						<button class="w3-btn-block w3-theme-l3 w3-hover-green" onclick="open_author('{{ author.id }}')">{{ author.name }}</button>
 					{% endfor %}
