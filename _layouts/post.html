@@ -7,5 +7,5 @@ layout: default
 		<div class="w3-left"><h1>{{ page.title }}</h1></div>
 		<div class="w3-right"><p style="margin-top: 40px; margin-bottom: 0px;">{{ page.language }}  Version</p></div>
 	</header>
-	{{ content }}
+	{{ content | markdownify }}
 </div>
