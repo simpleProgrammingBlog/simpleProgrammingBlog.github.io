@@ -10,5 +10,18 @@ layout: default
 		<div class="w3-left">
 			{{ content }}
 		</div>
+		<div class="w3-container" style="padding: 16px;">
+			<div class="w3-right w3-container" style="padding: 0px; margin: 0px 0px 0px 16px; width:180px;">
+				<header class="w3-container w3-blue">
+				  <h1>Authors</h1>
+				</header>
+				<div class="w3-container">
+					{% for author in site.data.authors %}
+						<button onclick="open_author('{{ author.id }}')" class="w3-btn">{{ author.name }}</button>
+					{% endfor %}
+				</div>
+			</div>
+			<p style="margin: 0px;">{{ content }}</p>
+		</div>
 	</div>
 </div>
