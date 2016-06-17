@@ -28,6 +28,7 @@ public class HelloWorld {
 var s = "Hello, World!";
 alert(s);
 ```
+{: .language-ruby}
 
 ```Python
 print("Hello, World!")
