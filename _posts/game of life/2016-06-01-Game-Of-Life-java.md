@@ -23,16 +23,16 @@ public class HelloWorld {
 }
 ~~~
 
-~~~JavaScript
+~~~javaScript
 var s = "Hello, World!";
 alert(s);
 ~~~
 
-~~~Python
+~~~python
 print("Hello, World!")
 ~~~
 
-~~~Go
+~~~go
 package main
 
 import "fmt"
@@ -42,7 +42,7 @@ func main() {
 }
 ~~~
 
-~~~C++
+~~~c++
 #include <iostream>
 
 int main()
@@ -53,7 +53,7 @@ int main()
 ~~~
 
 
-~~~C#
+~~~c#
 public class Hello1 {
 	public static void Main() {
 		System.Console.WriteLine("Hello, World!");
