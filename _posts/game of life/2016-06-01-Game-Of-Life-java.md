@@ -14,7 +14,7 @@ Blockquote
 ---
 code blocks
 
-~~~
+~~~java
 public class HelloWorld {
     public static void main(String[] args) {
         // Prints "Hello, World" to the terminal window.
@@ -22,7 +22,6 @@ public class HelloWorld {
     }
 }
 ~~~
-{: .language-java}
 
 ~~~JavaScript
 var s = "Hello, World!";
