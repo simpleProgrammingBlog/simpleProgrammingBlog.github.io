@@ -24,17 +24,16 @@ public class HelloWorld {
 ~~~
 {: .language-java}
 
-```JavaScript
+~~~JavaScript
 var s = "Hello, World!";
 alert(s);
-```
-{: .language-ruby}
+~~~
 
-```Python
+~~~Python
 print("Hello, World!")
-```
+~~~
 
-```Go
+~~~Go
 package main
 
 import "fmt"
@@ -42,9 +41,9 @@ import "fmt"
 func main() {
 	fmt.Printf("Hello, world.\n")
 }
-```
+~~~
 
-```C++
+~~~C++
 #include <iostream>
 
 int main()
@@ -52,20 +51,20 @@ int main()
 	std::cout << "hello world!\n";
 	return 0;
 }
-```
+~~~
 
-```C#
+~~~C#
 public class Hello1 {
 	public static void Main() {
 		System.Console.WriteLine("Hello, World!");
 	}
 }
-```
+~~~
 
-```
+~~~
 No language indicated, so no syntax highlighting. 
 But let's throw in a <b>tag</b>.
-```
+~~~
 
 ---
 definition list
