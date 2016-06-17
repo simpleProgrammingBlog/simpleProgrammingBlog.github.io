@@ -8,12 +8,13 @@ permalink: /GameOfLife-java
 ---
 
 Blockquote
+
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras volutpat odio nec libero cursus, commodo feugiat magna condimentum. Cras fermentum quam et nibh vehicula, ac imperdiet velit sollicitudin. Fusce quis arcu lacus. Mauris placerat lorem eu aliquam volutpat. Vivamus eu nisi non nulla tempor semper. Praesent nisl eros, blandit varius justo pulvinar, volutpat suscipit leo. Aliquam lacinia aliquam ex a aliquet.
 
 ---
 code blocks
 
-```Java
+```
 public class HelloWorld {
     public static void main(String[] args) {
         // Prints "Hello, World" to the terminal window.
@@ -21,6 +22,7 @@ public class HelloWorld {
     }
 }
 ```
+{: .language-java}
 
 ```JavaScript
 var s = "Hello, World!";
