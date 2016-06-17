@@ -23,7 +23,7 @@ public class HelloWorld {
 }
 ~~~
 
-~~~javaScript
+~~~javascript
 var s = "Hello, World!";
 alert(s);
 ~~~
