@@ -10,7 +10,7 @@ type: main
 	float: left; 
 	margin: 10px 5px 5px 5px;
 }
-#header {
+#footer {
     padding: 2px 0px 2px 0px; 
 	text-align: center;
 }
@@ -51,9 +51,6 @@ type: main
 	<!-- loop through each title in the array -->
 	{% for title in title_array %}
 		<div class="w3-card-4" id="card">
-			<header class="w3-container w3-theme" id="header">
-				<h4 class="project_title" id="title">{{ title | truncate: 25 }}</h4>
-			</header>
 			<div class="w3-container" id="imageHolder">
 				<img src="{{ site.url }}/assets/project images/{{title}}.gif"  
 					 alt="{{ title }}" style="margin: 0px;padding: 0px;"
@@ -62,6 +59,9 @@ type: main
 					 height="180"/>
 			 
 			</div>
+			<footer class="w3-container w3-theme" id="footer">
+				<h4 class="project_title" id="title">{{ title | truncate: 25 }}</h4>
+			</footer>
 		</div>
 	{% endfor %}
 </div>
