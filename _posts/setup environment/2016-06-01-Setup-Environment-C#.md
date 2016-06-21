@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Snake game"
+title: "Setup Environment"
 language: "C#"
 date: 2016-06-01
 type: draft
-permalink: /snake_game-csharp
+permalink: /setup_environment-csharp
 ---
 
 temp
