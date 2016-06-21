@@ -15,6 +15,7 @@ Blockquote
 code blocks
 
 -java
+
 ~~~java
 public class HelloWorld {
     public static void main(String[] args) {
@@ -25,17 +26,20 @@ public class HelloWorld {
 ~~~
 
 -javascript
+
 ~~~javascript
 var s = "Hello, World!";
 alert(s);
 ~~~
 
 -python
+
 ~~~python
 print("Hello, World!")
 ~~~
 
 -go
+
 ~~~go
 package main
 
@@ -47,6 +51,7 @@ func main() {
 ~~~
 
 -c++
+
 ~~~c++
 #include <iostream>
 
@@ -58,6 +63,7 @@ int main()
 ~~~
 
 -c#
+
 ~~~c#
 public class Hello1 {
 	public static void Main() {
@@ -67,6 +73,7 @@ public class Hello1 {
 ~~~
 
 -noone
+
 ~~~
 No language indicated, so no syntax highlighting. 
 But let's throw in a <b>tag</b>.
