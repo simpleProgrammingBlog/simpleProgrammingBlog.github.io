@@ -50,18 +50,19 @@ type: main
 	
 	<!-- loop through each title in the array -->
 	{% for title in title_array %}
-		<div class="w3-card-4" id="card">
-			<div class="w3-container" id="imageHolder">
-				<img src="{{ site.url }}/assets/project images/{{title}}.gif"  
-					 alt="{{ title }}" style="margin: 0px;padding: 0px;"
-					 onerror="this.src='{{ site.url }}/assets/project images/temp.gif'"
-					 width="180" 
-					 height="180"/>
-			 
+		<a href="/" style="text-decoration: none;">
+			<div class="w3-card-4" id="card">
+				<div class="w3-container" id="imageHolder">
+					<img src="{{ site.url }}/assets/project images/{{title}}.gif"  
+						 alt="{{ title }}" style="margin: 0px;padding: 0px;"
+						 onerror="this.src='{{ site.url }}/assets/project images/temp.gif'"
+						 width="180" 
+						 height="180"/>
+				</div>
+				<footer class="w3-container w3-theme-l3" id="footer">
+					<h4 class="project_title" id="title">{{ title | truncate: 25 }}</h4>
+				</footer>
 			</div>
-			<footer class="w3-container w3-theme" id="footer">
-				<h4 class="project_title" id="title">{{ title | truncate: 25 }}</h4>
-			</footer>
-		</div>
+		</a>
 	{% endfor %}
 </div>
