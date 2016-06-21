@@ -10,7 +10,7 @@ type: main
 	float: left; 
 	margin: 10px 5px 5px 5px;
 }
-#footer {
+#titleContainer {
     padding: 2px 0px 2px 0px; 
 	text-align: center;
 }
@@ -37,21 +37,24 @@ type: main
 }
 </style>
 
+<!-- fill title_array with all the titles for each post -->
+{% assign title_array = "" | split:"" %}
+{% for post in site.posts %}
+	{% unless title_array contains post.title %}
+		{% if post.type == 'post' %}
+			{% assign title_array = title_array | push: post.title %}
+		{% endif %}
+	{% endunless %}
+{% endfor %}
+
 <div style="padding: 0px;">
-	<!-- fill title_array with all the titles for each post -->
-	{% assign title_array = "" | split:"" %}
-	{% for post in site.posts %}
-		{% unless title_array contains post.title %}
-			{% if post.type == 'post' %}
-				{% assign title_array = title_array | push: post.title %}
-			{% endif %}
-		{% endunless %}
-	{% endfor %}
-	
 	<!-- loop through each title in the array -->
 	{% for title in title_array %}
 		<a href="/" style="text-decoration: none;">
 			<div class="w3-card-4" id="card">
+				<div class="w3-container w3-theme-l3" id="titleContainer">
+					<h4 class="project_title" id="title">{{ title | truncate: 25 }}</h4>
+				</div>
 				<div class="w3-container" id="imageHolder">
 					<img src="{{ site.url }}/assets/project images/{{title}}.gif"  
 						 alt="{{ title }}" style="margin: 0px;padding: 0px;"
@@ -59,9 +62,6 @@ type: main
 						 width="180" 
 						 height="180"/>
 				</div>
-				<footer class="w3-container w3-theme-l3" id="footer">
-					<h4 class="project_title" id="title">{{ title | truncate: 25 }}</h4>
-				</footer>
 			</div>
 		</a>
 	{% endfor %}
