@@ -27,11 +27,11 @@
 			</ul>
 		</div>
 		<br><br>
-		{{ content }}
+{{ content }}
 	</body>
 	
 	<!-- <button onclick="open_author('joshua')" class="w3-btn">Joshua</button> -->
-	
+	<!-- create the info cards for the authors -->
 	{% for author in site.data.authors %}
 		<div id="{{ author.id }}" class="w3-modal">
 			<div class="w3-modal-content w3-animate-up w3-card-8">
