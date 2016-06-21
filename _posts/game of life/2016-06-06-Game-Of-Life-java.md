@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Game of life"
+title: "Game Of Life"
 language: "Java"
-date: 2016-06-01
+date: 2016-06-06
 type: post
-permalink: /GameOfLife-java
+permalink: /game_of_life-java
 ---
 
 Blockquote

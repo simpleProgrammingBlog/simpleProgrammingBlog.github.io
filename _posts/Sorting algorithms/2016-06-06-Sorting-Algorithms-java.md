@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Sorting Algorithms"
-language: "C++"
+language: "Java"
 date: 2016-06-02
 type: draft
-permalink: /Sorting_Algorithms-c++
+permalink: /Sorting_Algorithms-java
 ---
 
 temp

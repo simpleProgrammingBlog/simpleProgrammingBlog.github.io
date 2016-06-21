@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Fractal Viewer"
-language: "C++"
+language: "Java"
 date: 2016-06-02
 type: draft
-permalink: /fractal_viewer-c++
+permalink: /fractal_viewer-java
 ---
 
 temp
