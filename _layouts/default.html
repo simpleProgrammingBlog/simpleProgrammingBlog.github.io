@@ -15,15 +15,10 @@
 				<li><a class="{% if page.type == 'main' %}w3-green{% endif %} w3-hover-green" href="/">Projects</a></li>
 				
 				{% if page.type == 'post' %}
-				
 					<li class="w3-red" style="padding:8px 16px 8px 16px;">{{ page.title }}:</li>
-					{% for post in site.posts %}
-						{% if post.title == page.title %}
-								{% if post.type == 'post' %}
-								<li><a class="{% if post.language == page.language %}w3-green{% endif %} w3-hover-green" href="{{ post.url }}">{{ post.language }}</a></li>
-							{% endif %}
-						{% endif %}
-					{% endfor %}
+					{% for post in site.posts %} {% if post.title == page.title %} {% if post.type == 'post' %}
+						<li><a class="{% if post.language == page.language %}w3-green{% endif %} w3-hover-green" href="{{ post.url }}">{{ post.language }}</a></li>
+					{% endif %} {% endif %} {% endfor %}
 				{% endif %}
 				
 				<li class="w3-right"><a class="{% if page.type == 'about' %}w3-green{% endif %} w3-hover-green" href="/about/">About</a></li>
