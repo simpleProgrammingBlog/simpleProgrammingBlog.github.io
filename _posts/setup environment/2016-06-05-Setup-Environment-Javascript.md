@@ -3,7 +3,7 @@ layout: post
 title: "Setup Environment"
 language: "Javascript"
 date: 2016-01-05
-type: draft
+type: post
 permalink: /setup_environment-javascript
 ---
 

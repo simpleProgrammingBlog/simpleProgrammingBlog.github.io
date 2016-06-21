@@ -3,7 +3,7 @@ layout: post
 title: "Setup Environment"
 language: "Golang"
 date: 2016-01-03
-type: draft
+type: post
 permalink: /setup_environment-go
 ---
 
