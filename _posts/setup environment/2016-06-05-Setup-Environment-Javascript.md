@@ -7,4 +7,3 @@ type: post
 permalink: /setup_environment-javascript
 ---
 
-temp
