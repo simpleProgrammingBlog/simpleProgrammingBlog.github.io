@@ -63,17 +63,13 @@ type: main
 			 
 			</div>
 			<div class="w3-container w3-theme-l2" id="buttonHolder">
-				{% for post in site.posts %}
-					{% if post.title == title %}
-						{% if post.type == 'post' %}
-							<a href="{{ post.url }}" style="text-decoration: none;">
-								<button class="w3-btn-block w3-theme-l2 w3-hover-green" id="button">
-									{{ post.language }}
-								</button>
-							</a>
-						{% endif %}
-					{% endif %}
-				{% endfor %}
+				{% for post in site.posts %}{% if post.title == title %}{% if post.type == 'post' %}
+					<a href="{{ post.url }}" style="text-decoration: none;">
+						<button class="w3-btn-block w3-theme-l2 w3-hover-green" id="button">
+							{{ post.language }}
+						</button>
+					</a>
+				{% endif %}{% endif %}{% endfor %}
 			</div>
 		</div>
 	{% endfor %}
